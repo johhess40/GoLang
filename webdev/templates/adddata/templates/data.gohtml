@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>This is the best program ever!</title>
+</head>
+<body>
+{{$playas := .}}
+<h1>The best basketball players ever</h1>
+<ul>
+    {{range $playas}}
+    <li>{{.}}</li>
+    {{end}}
+</ul>
+</body>
+</html>
