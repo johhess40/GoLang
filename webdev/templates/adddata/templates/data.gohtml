@@ -5,11 +5,12 @@
     <title>This is the best program ever!</title>
 </head>
 <body>
-{{$playas := .}}
-<h1>The best basketball players ever</h1>
+<h1>The best cars ever!</h1>
 <ul>
-    {{range $playas}}
-    <li>{{.}}</li>
+    {{range .Items}}
+    <li>
+        {{.}}
+    </li>
     {{end}}
 </ul>
 </body>
