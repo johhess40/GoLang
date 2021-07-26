@@ -7,14 +7,16 @@ import (
 )
 
 var wg sync.WaitGroup
-func main(){
+
+func main() {
 
 	wg.Add(2)
 
 	go func() {
+		defer wg.Done()
 		fmt.Println("--First anonymous go routine running--")
 		time.Sleep(5 * time.Second)
-		defer wg.Done()
+
 		fmt.Println("--First anonymous go routine finished--")
 	}()
 	go func() {

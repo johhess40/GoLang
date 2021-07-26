@@ -5,7 +5,9 @@ import (
 	"sync"
 	"time"
 )
+
 var wg sync.WaitGroup
+
 func main() {
 
 	fmt.Println("Starting goroutine demonstration")
@@ -13,8 +15,6 @@ func main() {
 	primechan := make(chan string)
 	secdchan := make(chan string)
 	lastchan := make(chan string)
-
-
 
 	wg.Add(3)
 	go echoSomething(primechan)
