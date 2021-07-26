@@ -1,0 +1,9 @@
+people:
+  - person:
+      name: "Joe Rogan"
+      age: 45
+      job: "Conspiracy"
+  - person:
+      name: "James Bond"
+      age: 32
+      job: "Agent"
