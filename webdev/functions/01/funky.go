@@ -24,7 +24,7 @@ type Inventory struct {
 }
 
 func init() {
-	temp = template.Must(template.New("").Funcs(fm).ParseFiles("./templates/funky.gohtml"))
+	temp = template.Must(template.New("").Funcs(fm).ParseFiles("./templates/pipe.gohtml"))
 }
 
 func firstThree(s string) string {
@@ -53,7 +53,7 @@ func main() {
 	data := Inventory{
 		Items: favcars,
 	}
-	err := temp.ExecuteTemplate(os.Stdout, "funky.gohtml", data)
+	err := temp.ExecuteTemplate(os.Stdout, "pipe.gohtml", data)
 	if err != nil {
 		return
 	}
