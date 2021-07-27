@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-=======
 .idea
->>>>>>> cb59921... First code for Sentinel testing
-
 ### Go ###
 # Binaries for programs and plugins
 *.exe
@@ -13,11 +9,7 @@
 
 # Test binary, built with `go test -c`
 *.test
-<<<<<<< HEAD
-.idea
-=======
 
->>>>>>> cb59921... First code for Sentinel testing
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
 
