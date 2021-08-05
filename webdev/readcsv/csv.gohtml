@@ -36,12 +36,14 @@
     {{range $csvData}}
         <li>
             Date: {{(index . 0)}}
-            Open: {{(index . 1)}}
-            High: {{(index . 2)}}
-            Low: {{(index . 3)}}
-            Close: {{(index . 4)}}
-            Volume: {{(index . 5)}}
-            Adj Close: {{(index . 6)}}
+            <ul>
+                Open: {{(index . 1)}}<br>
+                High: {{(index . 2)}}<br>
+                Low: {{(index . 3)}}<br>
+                Close: {{(index . 4)}}<br>
+                Volume: {{(index . 5)}}<br>
+                Adj Close: {{(index . 6)}}<br>
+            </ul>
         </li>
         {{end}}
     {{end}}
