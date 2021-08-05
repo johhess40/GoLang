@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style type="text/css">
+        body {
+	background-color: cornflowerblue;
+    font-family: 'Lobster', cursive;
+            text-align: center;
+            text-shadow: #6C7A89;
+        }
+        p {
+            font-family: 'Lobster', cursive;
+            text-align: justify;
+            border: 1px solid black;
+        }
+        div {
+            font-family: 'Lobster', cursive;
+            border: 1px solid black;
+            text-align: justify;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<h1>
+    The Egg And I Menu
+</h1>
+    {{$spots := .Restaurant.TheEggAndI}}
+<p>
+    Below you will find what meals we are currently offering!
+</p>
+<div class="Restaurant">
+    The Egg and I Menu:<br>
+    {{range $spots}}
+    -Breakfast:
+    {{range ( index $spots 0).Breakfast}}<br>
+    <li>Dish: {{.Dish}}<br>
+    Side: {{.Side}}<br>
+    Drinks: {{range .Drinks}}<br>
+    {{.}}
+    </li><br>
+    {{end}}
+    {{end}}
+    -Lunch:
+    {{range ( index $spots 0).Lunch}}<br>
+    <li>Dish: {{.Dish}}<br>
+    Side: {{.Side}}<br>
+    Drinks: {{range .Drinks}}<br>
+    {{.}}<br>
+    </li>
+    {{end}}
+    {{end}}
+    -Dinner:
+    {{range ( index $spots 0).Dinner}}<br>
+    <li>Dish: {{.Dish}}<br>
+    Side: {{.Side}}<br>
+    Drinks: {{range .Drinks}}<br>
+    {{.}}<br>
+    </li>
+    {{end}}
+    {{end}}
+    {{end}}<br>
+</div>
+</body>
+</html>

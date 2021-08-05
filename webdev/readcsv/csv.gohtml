@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style type="text/css">
+        body {
+            background-color: cornflowerblue;
+            font-family: 'Lobster', cursive;
+            text-align: center;
+            text-shadow: #6C7A89;
+        }
+        p {
+            font-family: 'Lobster', cursive;
+            text-align: justify;
+            border: 1px solid black;
+        }
+        div {
+            font-family: 'Lobster', cursive;
+            border: 1px solid black;
+            text-align: justify;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<h1>
+    CSV MADNESS
+</h1>
+<p>
+    Behold the worst code ever!
+</p>
+<div class="Csv">
+{{$csvData := .Data}}
+    {{$csvLen := .Length}}
+    {{if (lt 0 $csvLen)}}
+    {{range $csvData}}
+        <li>
+            Date: {{(index . 0)}}
+            Open: {{(index . 1)}}
+            High: {{(index . 2)}}
+            Low: {{(index . 3)}}
+            Close: {{(index . 4)}}
+            Volume: {{(index . 5)}}
+            Adj Close: {{(index . 6)}}
+        </li>
+        {{end}}
+    {{end}}
+</div>
+</body>
+</html>

@@ -5,19 +5,8 @@
     <title>This is the best program ever!</title>
 </head>
 <body>
-<h1>The best cars ever!</h1>
-<ul>
-    {{range .Items}}
-    <li>
-        {{uc .Name}} -- {{uc .Manufacturer}} -- {{uc .Year}}
-    </li>
-    {{end}}
+Without date formatting: {{.}}
 
-    {{range .Items}}
-        <li>
-            {{ft .Name}} -- {{ft .Manufacturer}} -- {{ft .Year}}
-        </li>
-    {{end}}
-</ul>
+With date formatting: {{. | fdateMDY}}
 </body>
 </html>
