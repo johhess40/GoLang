@@ -26,6 +26,8 @@ func main() {
 
 	csvLen := len(csvGrab)
 
+	csvGrab = csvGrab[1:csvLen]
+
 	csvData := CsvMadness{
 		Data: csvGrab,
 		Length: csvLen,
